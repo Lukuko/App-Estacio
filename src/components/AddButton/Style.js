@@ -7,7 +7,7 @@ export const Container = styled.TouchableOpacity`
 `;
 
 export const Add = styled.View`
-  background-color: #0171b1;
+  background-color: #075793;
   width: 55px;
   height: 55px;
   border-radius: 100px;

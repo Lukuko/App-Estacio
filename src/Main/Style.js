@@ -8,4 +8,5 @@ export const Container = styled.SafeAreaView `
     margin-top: ${isAndroid ? `${StatusBar.currentHeight}px` : '0'};
     flex: 1;
 `;
+
 //O template iteral passa uma condição que irá lidar com as diferenças nas alturas das barras de status entre Ios e Android

@@ -1,45 +1,63 @@
 import styled from 'styled-components/native';
 
 export const Produtos = styled.View`
-  margin: 24px 20px 0;
-  padding: 24px;
+  margin: 24px 30px 0;
+  padding: 10px;
+  gap:10px
   border-width: 1px;
   border-color: #EEEEEE;
   border-radius: 12px;
-  gap: 24px;
-  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 350px;
+`;
+
+export const ProdutosInfo = styled.View`
+align-items: center;
+flex-direction: column;
+width: 60%
+justify-content: flex-start;
+align-items: stretch;
 `;
 
 export const ProdutosHeader = styled.View`
-align-items: center`;
+flex: 1
+align-items: flex-start;
 
-export const ProdutosDescription = styled.View``;
+`;
+export const ProdutosDescription = styled.View`
+
+margin-bottom: 15px;
+gap: 8px;
+`;
 
 export const ProdutosFooter = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-export const ProdutosStatus = styled.TouchableOpacity`
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-`;
 
+justify-content: space-between;
+gap:8px;
+`;
+export const ProdutosAction = styled.View`
+flex-direction: row;
+justify-content: flex-start;
+gap: 40px;
+`;
+export const ProdutosStatus = styled.View`
+
+`;
 export const ProdutosIcon = styled.Image`
   width: 16px;
   height: 16px;
   resize-mode: contain;
 `;
-
-export const ProdutosAction = styled.View`
+export const ProdutosActionIcons = styled.View`
+justify-content: space-around;
 flex-direction: row;
-justify-content: space-between;
-align-items: center;
-gap: 16px;
+align-items: flex-end;
+gap: 5px;
 `;
 export const ProdutosImage = styled.Image`
-  width: 233px;
-  height: 117px;
+  width: 133px;
+  height: 127px;
   background-color: #f63298;
+  border-radius:12px;
 `;

@@ -1,9 +1,10 @@
 import loupe from '../../assets/images/loupe.png';
-import { Container, Add, SearchIcon } from './Style';
+import { Container, SearchIcon, StyledTextInput } from './Style';
 
 export default function SearchBar({ onPress }) {
     return (
-      <Container onPress={onPress}>
+      <Container>
+        <StyledTextInput onPress={onPress} placeholder="Pesquise o Equipamento desejado"/>
         <SearchIcon source={loupe}/>
       </Container>
     );
