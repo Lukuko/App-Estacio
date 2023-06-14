@@ -1,12 +1,10 @@
-import { Text } from "../Text";
-import { Container } from "./Style";
+import LogoImage from '../../assets/images/Mosaic_Logo.svg.png';
+import { Container, Logo } from "./Style";
 //Esse componente vai ser responsável exclusivamente pelo Header do app, onde vai ter a logo
 export default function Header(){
     return(
         <Container>
-            <Text size={24}>
-                Logo
-            </Text>
+            <Logo source={LogoImage}/>
         </Container>
     )
 }

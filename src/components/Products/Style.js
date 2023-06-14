@@ -44,17 +44,13 @@ gap: 40px;
 export const ProdutosStatus = styled.View`
 
 `;
-export const ProdutosIcon = styled.Image`
-  width: 16px;
-  height: 16px;
-  resize-mode: contain;
+export const ProdutosStatusIcon = styled.Image`
+width: 16px;
+height: 16px;
+resize-mode: contain;
 `;
-export const ProdutosActionIcons = styled.View`
-justify-content: space-around;
-flex-direction: row;
-align-items: flex-end;
-gap: 5px;
-`;
+
+
 export const ProdutosImage = styled.Image`
   width: 133px;
   height: 127px;

@@ -6,8 +6,15 @@ export const Container = styled.View`
     align-items: center;
     background-color: #075793;
     width: 100%;
-    height: 10%;
+    height: 15%;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     elevation: 10;
+    justify-content: center;
+`;
+export const Logo = styled.Image`
+    width: 133px;
+    height: 105px;
+    resize-mode: contain;
+    margin-top: -30px;
 `;
