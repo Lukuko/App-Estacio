@@ -24,7 +24,6 @@ export const SearchIcon = styled.Image`
   resize-mode: contain;
   margin-right: 5px;
 `;
-import styled from 'styled-components/native';
 
 export const Overlay = styled.TouchableOpacity`
   background: rgba(0, 0, 0, 0.6);

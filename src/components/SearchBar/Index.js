@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { Text } from '../Text';
 import { Modal, View, FlatList,TouchableOpacity } from 'react-native';
 import { productData } from '../../mocks/Products';
-import { Produtos,ProdutosInfo, ProdutosHeader,ProdutosDescription,ProdutosFooter,ProdutosStatus,ProdutosAction, ProdutosImage, ProdutosStatusIcon} from "../Products/Style";
+import { Card,CardInfo, CardHeader,CardDescription,CardFooter,CardStatus,CardAction, CardImage, CardStatusIcon} from "../Products/Style";
 import disponible from '../../assets/images/disponivel.png';
 import person from '../../assets/images/pessoa.png';
+import Header from "../Header/Index";
 export default function SearchBar({ onPress }) {
   const [searchText, setSearchText] = useState('');
   const [showResults, setShowResults] = useState(false);
@@ -41,38 +42,39 @@ export default function SearchBar({ onPress }) {
           <SearchIcon source={loupe} />
         </TouchableOpacity>
         <Modal visible={showResults} onRequestClose={handleCloseModal}>
+        <Header />
           <View>
             <FlatList
-              initialNumToRender={1000}
+              initialNumToRender={10}
               windowSize={21}
-              data={searchResults} // Substitua 'productData' por 'searchResults'
+              data={searchResults}
               keyExtractor={(item) => item._equipment_cod.toString()}
               renderItem={({ item }) => (
-                <Produtos>
-                  <ProdutosImage />
-                  <ProdutosInfo>
-                    <ProdutosHeader>
+                <Card>
+                  <CardImage source={item.image} />
+                  <CardInfo>
+                    <CardHeader>
                       <Text weight="600" size={15}>{item.name}</Text>
-                    </ProdutosHeader>
-                    <ProdutosDescription>
+                    </CardHeader>
+                    <CardDescription>
                       <Text size={15}>{item._equipment_cod}</Text>
                       <Text size={15}>{item.description}</Text>
                       <Text size={15} color="#2528be">
                         {item.disponibleStatus === false ? null : item.acquisition_time}
                       </Text>
-                      <ProdutosFooter>
-                        <ProdutosAction>
-                          <ProdutosStatus>
+                      <CardFooter>
+                        <CardAction>
+                          <CardStatus>
                             <Text size={15} color={item.disponible ? '#009900' : '#2596be'}>
-                              <ProdutosStatusIcon source={item.disponible ? disponible : person} />
+                              <CardStatusIcon source={item.disponible ? disponible : person} />
                               {item.disponible ? item.disponibleStatus : item.registration}
                             </Text>
-                          </ProdutosStatus>
-                        </ProdutosAction>
-                      </ProdutosFooter>
-                    </ProdutosDescription>
-                  </ProdutosInfo>
-                </Produtos>
+                          </CardStatus>
+                        </CardAction>
+                      </CardFooter>
+                    </CardDescription>
+                  </CardInfo>
+                </Card>
               )}
             />
           </View>
